@@ -9,14 +9,18 @@ int main()
    int x,p,sum=0,count=0;
    printf("Enter the coffee price and value of p\n");
    scanf("%d%d",&x,&p);
-   p=100-p;
-   while(x!=0)
-   {
-       sum=sum+x;
-       x=(p*x)/100;
-       count++;
-   }
+   if(x<=10000 && x>=0){
+   if(p<=100 && p>=0){
+       p=100-p;
+       while(x!=0)
+       {
+          sum=sum+x;
+          x=(p*x)/100;
+          count++;
+       }
    printf("%d\n",sum);
    printf("Number of coffee:%d",count);
    return 0;
+   }
+   }
 }
